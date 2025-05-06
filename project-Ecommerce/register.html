@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký tài khoản</title>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="/css/register.css" />
+</head>
+
+<body>
+  <div class="register-container">
+    <form class="register-form" id="registerForm">
+      <h1 class="title">Đăng ký tài khoản</h1>
+      <p class="subtitle">Đăng ký tài khoản để sử dụng dịch vụ</p>
+
+      <div class="name-group">
+        <div class="input-group">
+          <label for="lastname">Họ và tên đệm</label>
+          <input type="text" id="lastname" placeholder="Nguyễn Văn" />
+          <p class="error-message" id="lastname-error"></p>
+        </div>
+        <div class="input-group">
+          <label for="firstname">Tên</label>
+          <input type="text" id="firstname" placeholder="An" />
+          <p class="error-message" id="firstname-error"></p>
+        </div>
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@company.com" />
+      <p class="error-message" id="email-error"></p>
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" placeholder="••••••••" />
+      <p class="error-message" id="password-error"></p>
+
+      <label for="confirm-password">Xác nhận mật khẩu</label>
+      <input type="password" id="confirm-password" placeholder="••••••••" />
+      <p class="error-message" id="confirm-password-error"></p>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" id="terms-checkbox" />
+          Bạn đồng ý với <a href="#">chính sách và điều khoản</a>
+        </label>
+        <p class="error-message" id="terms-error"></p>
+      </div>
+
+      <button type="submit">Đăng ký</button>
+
+      <p class="login-link">
+        Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="/js/register.js"></script>
+</body>
+
+</html>

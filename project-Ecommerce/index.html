@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <!-- Header Top -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="/assets/img/img-logo/Logo.png" alt="logo" />
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm..." />
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Trang chủ</a>
+                <a href="/page/category-manager.html">Danh mục</a>
+                <a href="/page/product-manager.html">Sản phẩm</a>
+            </nav>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user" id="infoUser"></i>
+            </div>
+        </div>
+
+        <!-- Subnav -->
+        <div class="subnav">
+            <a href="#"><i class="icon"><i class="fa-solid fa-mobile-screen"></i></i> Điện thoại</a>
+            <a href="#"><i class="icon"><i class="fa-solid fa-laptop"></i></i> Laptop</a>
+            <a href="#"><i class="icon"><i class="fa-solid fa-clock"></i></i> Đồng hồ thông minh</a>
+            <a href="#"><i class="icon"><i class="fa-solid fa-camera"></i></i> Cameras</a>
+            <a href="#"><i class="icon"><i class="fa-solid fa-headphones"></i></i> Tai nghe</a>
+            <a href="#"><i class="icon"><i class="fa-solid fa-gamepad"></i></i> Gaming</a>
+        </div>
+    </header>
+
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-images">
+            <img src="/assets/img/img-banner/banner-1.png" alt="Banner 1" class="active" />
+            <img src="/assets/img/img-banner/banner-2.webp" alt="Banner 2" />
+            <img src="/assets/img/img-banner/banner-3.jpg" alt="Banner 3" />
+        </div>
+    </section>
+
+    <!-- Danh mục -->
+    <section class="category">
+        <div class="category-header">
+            <h2>Danh mục sản phẩm</h2>
+            <div class="nav-buttons">
+                <button id="scrollLeft">&lt;</button>
+                <button id="scrollRight">&gt;</button>
+            </div>
+        </div>
+        <div class="category-scroll-wrapper">
+            <div class="category-list" id="categoryList">
+                <!-- Danh mục sẽ render ở đây -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="product-section">
+        <div class="tab-menu">
+            <button class="active">New Arrival</button>
+            <button>Bestseller</button>
+            <button>Featured Products</button>
+        </div>
+        <div class="product-grid">
+            <!-- Thẻ sản phẩm -->
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <img src="/assets/img/img-product/Iphone-14-pro-1.png" alt="iPhone" />
+                    <h4>iPhone 14 Pro Max</h4>
+                    <p>$900</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <!-- Thêm các sản phẩm tương tự ở đây -->
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <img src="/assets/img/img-product/camera-2.png" alt="Camera 6K" />
+                    <h4>Blackmagic Pocket Cinema Camera 6k</h4>
+                    <p>$2535</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/apple-watch-3.png" alt="Apple Watch Series 9" />
+                    <h4>Apple Watch Series 9 GPS 41mm Starlight Aluminium</h4>
+                    <p>$399</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/airpods-4.png" alt="AirPods Max" />
+                    <h4>AirPods Max Silver</h4>
+                    <p>$549</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/gwatch-5.png" alt="Galaxy Watch 6" />
+                    <h4>Samsung Galaxy Watch6 Classic 47mm Black</h4>
+                    <p>$369</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/zfold-6.png" alt="Galaxy Z Fold5" />
+                    <h4>Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</h4>
+                    <p>$1799</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/buds-7.png" alt="Galaxy Buds FE" />
+                    <h4>Galaxy Buds FE Graphite</h4>
+                    <p>$99.99</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-product/apple-iPad-8.png" alt="iPad Gen 9" />
+                    <h4>Apple iPad 9 10.2” 64GB Wi-Fi Silver (MK2L3) 2021</h4>
+                    <p>$398</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sản phẩm giảm giá -->
+    <section class="product-section">
+        <h2>Sản phẩm giảm giá</h2>
+        <div class="product-grid">
+            <!-- Thẻ sản phẩm -->
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-discount-products/iphone14-pro-1.png" alt="iPhone 14 Pro Gold" />
+                    <h4>Apple iPhone 14 Pro 512GB Gold (MQ233)</h4>
+                    <p>$1437</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-discount-products/airpods-2.png" alt="AirPods Max" />
+                    <h4>AirPods Max Silver</h4>
+                    <p>$549</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-discount-products/apple-watch-3.png" alt="Apple Watch" />
+                    <h4>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</h4>
+                    <p>$399</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="favorite-icon"><i class="fas fa-heart"></i></div>
+                    <img src="/assets/img/img-discount-products/iphone-4.png" alt="iPhone 14 Pro Max" />
+                    <h4>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</h4>
+                    <p>$1499</p>
+                </div>
+                <div class="product-action">
+                    <a class="btn">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner khuyến mãi -->
+    <section class="summer-banner">
+        <img src="/assets/img/img-banner/banner-footer.png" alt="Ưu đãi mùa hè" />
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-column">
+            <img src="/assets/img/img-logo/logo-footer.png" alt="Logo" />
+            <p>Chúng tôi cung cấp đầy đủ sản phẩm công nghệ, giao hàng nhanh chóng và uy tín.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Dịch vụ</h4>
+            <ul>
+                <li>Chương trình khuyến mãi</li>
+                <li>Giao hàng nhanh</li>
+                <li>Bảo hành</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Hỗ trợ</h4>
+            <ul>
+                <li>Trung tâm hỗ trợ</li>
+                <li>Đổi trả hoàn tiền</li>
+                <li>Chính sách bảo mật</li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- Đăng xuất -->
+    <div class="user-dropdown" id="userDropdown">
+        <ul>
+            <li><i class="fas fa-user"></i> Thông tin tài khoản</li>
+            <li><i class="fas fa-shopping-cart"></i> Giỏ hàng</li>
+            <li id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</li>
+        </ul>
+    </div>
+
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

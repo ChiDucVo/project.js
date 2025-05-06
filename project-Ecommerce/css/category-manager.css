@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: #ef4444;
+}
+
+.sidebar nav a {
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 15px;
+}
+
+.sidebar nav a i {
+    margin-right: 10px;
+}
+
+.sidebar nav a.active {
+    background: #f3f4f6;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-header h1 {
+    font-size: 24px;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+}
+
+.controls input,
+.controls select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+/* Table */
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-table th,
+.category-table td {
+    text-align: left;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.category-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.category-table i {
+    margin-left: 6px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.badge.active {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.badge.inactive {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* Action buttons */
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.btn-icon i {
+    font-size: 16px;
+}
+
+.btn-icon.red i {
+    color: #ef4444;
+}
+
+
+.btn-icon:hover {
+    opacity: 0.7;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 6px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.pagination .active {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    border-color: #3b82f6;
+}
+
+.pagination span {
+    padding: 0 4px;
+    color: #6b7280;
+}
+
+
+
+/*  */
+/* MODAL */
+/*  */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    width: 60%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    background-color: #f2f2f2;
+    color: red;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: 500;
+}
+
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    display: none;
+}
+
+.status-group {
+    margin-top: 16px;
+}
+
+.status-group label {
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.modal-actions {
+    margin-top: 28px;
+    text-align: right;
+}
+
+.modal-actions .btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.modal-actions .btn.primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.modal-actions .btn.cancel {
+    background-color: #f3f4f6;
+}
+
+.page-btn:disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: 1px solid #d1d5db;
+}

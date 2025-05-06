@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="/css/category-manager.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2><i class="fas fa-fire"></i> Ecommerce</h2>
+            <nav>
+                <a href="/index.html"><i class="fas fa-chart-line"></i> Trang chủ</a>
+                <a href="#" class="active"><i class="fas fa-folder"></i> Danh mục</a>
+                <a href="/page/product-manager.html"><i class="fas fa-box-open"></i> Sản phẩm</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+            <header class="main-header">
+                <h1>Danh mục</h1>
+                <div class="controls">
+                    <select id="filter-status">
+                        <option value="all">Tất cả</option>
+                        <option value="active">Đang hoạt động</option>
+                        <option value="inactive">Ngừng hoạt động</option>
+                    </select>
+                    <input type="text" id="search-input" placeholder="Tìm kiếm danh mục theo tên" />
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Thêm mới danh mục</button>
+                </div>
+            </header>
+
+            <table class="category-table">
+                <thead>
+                    <tr>
+                        <th>Mã danh mục <i class="fas fa-sort"></i></th>
+                        <th>Tên danh mục <i class="fas fa-sort"></i></th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody id="categories-list">
+                    <!-- <tr>
+                        <td>DM001</td>
+                        <td>Quần áo</td>
+                        <td><span class="badge active">● Đang hoạt động</span></td>
+                        <td>
+                            <button class="btn-icon red"><i class="fas fa-trash-alt"></i></button>
+                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+
+            <div class="pagination" id="pagination">
+                <button>&laquo;</button>
+                <button>1</button>
+                <button>2</button>
+                <button class="active">3</button>
+                <button>4</button>
+                <button>5</button>
+                <span>...</span>
+                <button>20</button>
+                <button>&raquo;</button>
+            </div>
+        </main>
+
+
+        <!-- MODAL THÊM -->
+        <div class="modal" id="addModal">
+            <div class="modal-content">
+                <span class="close" id="closeAdd">&times;</span>
+                <h3>Thêm mới danh mục</h3>
+
+                <label for="add-code">Mã danh mục *</label>
+                <input type="text" id="add-code" />
+                <p class="error-message" id="add-code-error"></p>
+
+                <label for="add-name">Tên danh mục *</label>
+                <input type="text" id="add-name" />
+                <p class="error-message" id="add-name-error"></p>
+
+                <div class="status-group">
+                    <label>Trạng thái</label>
+                    <label><input type="radio" name="add-status" value="active" checked /> Đang hoạt động</label>
+                    <label><input type="radio" name="add-status" value="inactive" /> Ngừng hoạt động</label>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn cancel" id="cancelAdd">Hủy</button>
+                    <button class="btn primary">Thêm</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODAL SỬA -->
+        <div class="modal" id="editModal">
+            <div class="modal-content">
+                <span class="close" id="closeEdit">&times;</span>
+                <h3>Sửa danh mục</h3>
+
+                <label for="edit-code">Mã danh mục *</label>
+                <input type="text" id="edit-code" />
+                <p class="error-message" id="edit-code-error"></p>
+
+                <label for="edit-name">Tên danh mục *</label>
+                <input type="text" id="edit-name" />
+                <p class="error-message" id="edit-name-error"></p>
+
+                <div class="status-group">
+                    <label>Trạng thái</label>
+                    <label><input type="radio" name="edit-status" value="active" /> Đang hoạt động</label>
+                    <label><input type="radio" name="edit-status" value="inactive" /> Ngừng hoạt động</label>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn cancel" id="cancelEdit">Hủy</button>
+                    <button class="btn primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/category-manager.js"></script>
+</body>
+
+</html>
